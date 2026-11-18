@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestor de categorías</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <script src="/js/app.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <header class="topbar">
+      <a class="brand" href="/">Catálogo</a>
+      <span id="user-label" class="muted"></span>
+    </header>
+
+    <section id="auth-section" class="auth-grid">
+      <form id="login-form" class="panel">
+        <h1>Iniciar sesión</h1>
+        <p class="muted">Accede a tus categorías.</p>
+        <label>Correo electrónico
+          <input type="email" name="email" required maxlength="120" autocomplete="email">
+        </label>
+        <label>Contraseña
+          <input type="password" name="password" required minlength="8" autocomplete="current-password">
+        </label>
+        <button type="submit">Entrar</button>
+        <p class="form-message" id="login-message" aria-live="polite"></p>
+      </form>
+
+      <form id="register-form" class="panel">
+        <h1>Crear cuenta</h1>
+        <p class="muted">Regístrate para administrar tus categorías.</p>
+        <label>Nombre
+          <input type="text" name="name" required minlength="2" maxlength="60" autocomplete="name">
+        </label>
+        <label>Correo electrónico
+          <input type="email" name="email" required maxlength="120" autocomplete="email">
+        </label>
+        <label>Contraseña
+          <input type="password" name="password" required minlength="8" maxlength="72" autocomplete="new-password">
+        </label>
+        <button type="submit">Registrarme</button>
+        <p class="form-message" id="register-message" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section id="app-section" hidden>
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">ÁREA PRIVADA</p>
+          <h1>Mis categorías</h1>
+          <p class="muted">Organiza y administra tus categorías.</p>
+        </div>
+        <button id="logout-button" class="button-secondary" type="button">Cerrar sesión</button>
+      </div>
+
+      <form id="category-form" class="panel category-form">
+        <input type="hidden" name="id">
+        <label>Nombre de la categoría
+          <input type="text" name="name" required minlength="2" maxlength="80" placeholder="Ej. Tecnología">
+        </label>
+        <label>Descripción
+          <input type="text" name="description" maxlength="250" placeholder="Descripción breve (opcional)">
+        </label>
+        <div class="form-actions">
+          <button id="save-button" type="submit">Añadir categoría</button>
+          <button id="cancel-edit" class="button-secondary" type="button" hidden>Cancelar edición</button>
+        </div>
+        <p class="form-message" id="category-message" aria-live="polite"></p>
+      </form>
+
+      <div class="panel table-panel">
+        <div class="table-heading">
+          <h2>Listado</h2>
+          <span id="category-count" class="muted">0 categorías</span>
+        </div>
+        <div class="table-scroll">
+          <table>
+            <thead>
+              <tr><th>Nombre</th><th>Descripción</th><th>Acciones</th></tr>
+            </thead>
+            <tbody id="category-list"></tbody>
+          </table>
+        </div>
+        <p id="empty-state" class="muted empty-state">Todavía no tienes categorías.</p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
