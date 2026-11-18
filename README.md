@@ -20,3 +20,6 @@
 - Eliminar: borrar categorías existentes.
 - Cada usuario administra exclusivamente sus propias categorías mediante la identificación de su sesión.
 - Permite finalizar la sesión y salir del área privada de la aplicación.
+
+# *ANTWAN RAMOS.*
+# *JESID ROJANO.*
