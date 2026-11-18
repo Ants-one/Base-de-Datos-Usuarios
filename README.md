@@ -9,7 +9,7 @@
 - Garantizar que cada usuario pueda administrar únicamente sus propias categorías.
 -  Utilizar SQLite para almacenar y gestionar los datos.
 
-***Funcionalidades***:
+# ***Funcionalidades***:
 - Registro de usuarios.
 - Permite crear una cuenta mediante nombre, correo electrónico y contraseña.
 - Inicio de sesión.
